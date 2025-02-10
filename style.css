@@ -1,0 +1,435 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #4285f4;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --dark-gray: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-bottom: 4rem;
+}
+
+.navbar {
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.conference-date, .conference-location {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.topics-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.topics-list li {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.topics-list li:hover {
+    transform: translateX(10px);
+}
+
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.date-item {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.date-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Call for Papers Page Styles */
+.cfp-content {
+    padding: 4rem 0;
+}
+
+.cfp-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cfp-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.cfp-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.topics-section {
+    margin: 3rem 0;
+}
+
+.topic-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.topic-category {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topic-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.topic-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.topic-category li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.topic-category li:last-child {
+    border-bottom: none;
+}
+
+.submission-guidelines {
+    margin: 3rem 0;
+}
+
+.guidelines-content {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.guidelines-content h3 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.guidelines-content h3:first-child {
+    margin-top: 0;
+}
+
+.guidelines-content ul,
+.guidelines-content ol {
+    padding-left: 1.5rem;
+}
+
+.guidelines-content li {
+    margin: 0.5rem 0;
+}
+
+.publication {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+/* Important Dates Page Styles */
+.dates-content {
+    padding: 4rem 0;
+}
+
+.dates-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.dates-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    position: relative;
+    margin: 3rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-date {
+    width: 45%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.timeline-content {
+    width: 45%;
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    left: -60px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    right: -60px;
+}
+
+.date-box {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.date-box .month {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.date-box .day {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+.date-box .year {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.timeline-content li:last-child {
+    border-bottom: none;
+}
+
+.dates-note {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 4rem;
+}
+
+.dates-note h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.dates-note ul {
+    padding-left: 1.5rem;
+}
+
+.dates-note li {
+    margin: 0.5rem 0;
+}
+
+/* Responsive adjustments for timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        margin-left: 20px;
+    }
+
+    .timeline-date,
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+    }
+
+    .timeline-date {
+        text-align: left;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .topic-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .guidelines-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
